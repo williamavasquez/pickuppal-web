@@ -1,0 +1,24 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbarWrapper {
+  width: 100%;
+  background-color: var(--background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.content {
+  flex: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .navbarWrapper {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+} 

@@ -1,0 +1,366 @@
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.searchHero {
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #4f46e5, #818cf8);
+  color: white;
+  text-align: center;
+}
+
+.searchHeroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.searchHeroContent h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.searchHeroContent p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.searchInputContainer {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.searchButton {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #4f46e5;
+}
+
+.contentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  width: 100%;
+}
+
+.filterToggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: var(--background);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  display: none;
+}
+
+.toggleIcon {
+  font-size: 1.2rem;
+}
+
+.contentLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+}
+
+.filtersPanel {
+  background-color: var(--background);
+  border-radius: 8px;
+  padding: 1.5rem;
+  height: fit-content;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.filtersPanel h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.filterGroup {
+  margin-bottom: 1.5rem;
+}
+
+.filterGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.filterSelect {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: 0.9rem;
+}
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.resetButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+  margin-top: 1rem;
+}
+
+.resetButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.resultsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.resultsHeader h2 {
+  font-size: 1.5rem;
+}
+
+.resultsCount {
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.gamesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.gameCard {
+  background-color: var(--background);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.gameCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.gameCardContent {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.gameName {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.gameDate, .gameLocation, .gamePlayerCount, .gameFee {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.dateIcon, .locationIcon, .playerIcon, .feeIcon {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.gameCardFooter {
+  padding: 1rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.02);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.bookButton {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.bookButton:hover {
+  background-color: #4338ca;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  gap: 1rem;
+}
+
+.loadingSpinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #4f46e5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.noResults {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.noResultsIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  opacity: 0.6;
+}
+
+.noResults h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.noResults p {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .contentLayout {
+    grid-template-columns: 1fr;
+  }
+  
+  .filterToggle {
+    display: flex;
+  }
+  
+  .filtersPanel {
+    margin-bottom: 1.5rem;
+  }
+  
+  .gamesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .searchHeroContent h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .searchHero {
+    background: linear-gradient(to right, #4338ca, #6366f1);
+  }
+  
+  .searchButton {
+    color: #6366f1;
+  }
+  
+  .filterToggle {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .filtersPanel {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .filterSelect {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .resetButton {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .resetButton:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .resultsCount {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .gameCard {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .gameCard:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .gameCardFooter {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-top-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .bookButton {
+    background-color: #6366f1;
+  }
+  
+  .bookButton:hover {
+    background-color: #4f46e5;
+  }
+  
+  .loadingSpinner {
+    border-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #6366f1;
+  }
+  
+  .noResults p {
+    color: rgba(255, 255, 255, 0.6);
+  }
+} 
